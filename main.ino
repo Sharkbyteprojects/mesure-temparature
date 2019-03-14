@@ -10,13 +10,13 @@ void loop() {
   switchState = digitalRead(2);
   if (switchState == LOW){
     
-    Serial.print("Board Steht auf dem Kopf \n");
+    Serial.print("Board Failue \n");
   }else{
-    Serial.print("Board liegt richtig \n");
+    Serial.print("Board OK \n");
   }
   float volt = (sensorval/1024.0) * 5.0;
   float temp = (volt - .5) * 100;
-  Serial.print("Temperatur: ");
+  Serial.print("Temp: ");
   Serial.print(temp);
   Serial.print("°");
   Serial.print("\n \n");
